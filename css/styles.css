@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    /*background-color: rgb(77, 128, 175);*/
+    background-color: rgb(3, 145, 78);
+    color: #fff;
+    height: 100vh;
+}
+
+header {
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    height: 85%;
+}
+
+#container {
+    height: 100%;
+    width: auto;
+    display: grid;
+    grid-template-columns: 20% 60%;
+    justify-content: space-evenly;
+}
+
+#options-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+#options {
+    height: 60%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#options button {
+    width: 100px;
+    height: 33px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+#size-range {
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#game-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#game {
+    background-color: #fff;
+    height: 80%;
+    width: 75%;
+    display: grid;
+}
+
+footer {
+    height: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
