@@ -58,6 +58,12 @@ main {
     border-radius: 10px;
 }
 
+.active {
+    background-color: rgb(3, 145, 78);
+    color: white;
+    border: 1px solid white;
+}
+
 #size-range {
     height: 25%;
     display: flex;
@@ -73,8 +79,8 @@ main {
 
 #game {
     background-color: #fff;
-    height: 80%;
-    width: 75%;
+    height: 500px;
+    width: 500px;
     display: grid;
 }
 
