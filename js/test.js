@@ -43,6 +43,7 @@ function setColor(newColor) {
 }
 
 function setMode(newMode) {
+    btns(newMode)
     currentMode = newMode
 }
 
@@ -68,14 +69,31 @@ function createGrid() {
 function btns() {
     if (currentMode === 'color') {
         colorBtn.classList.add('active')
+        rainbowBtn.classList.remove('active')
+        eraserBtn.classList.remove('active')
     }
-    if(currentMode === 'rainbow') {
+    else if(currentMode === 'rainbow') {
         rainbowBtn.classList.add('active')
+        colorBtn.classList.remove('active')
+        eraserBtn.classList.remove('active')
     }
+    else if(currentMode === 'eraser') {
+        eraserBtn.classList.add('active')
+        colorBtn.classList.remove('active')
+        rainbowBtn.classList.remove('active')
+    }
+}
 
+function draw() {
+    if(currentMode === 'rainbow') {
+        currentColor = rainbow
+    }
+    if(currentMode === 'eraser') {
+        currentColor = 'rgb(256, 256, 256)'
+    }
 }
 
 window.onload = () => {
     createGrid()
-    btns()
+    draw()
 }
