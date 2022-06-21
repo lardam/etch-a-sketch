@@ -142,3 +142,27 @@ function restart() {
   grid.innerHTML = ''
   createGrid()
 }
+
+//Dark mode
+
+let today = new Date()
+let hour = today.getHours();
+
+const body = document.body
+const switchBtn = document.getElementById('switch-light')
+const switchIcon = document.getElementById('switch-icon')
+
+if(hour > 17 || hour < 6){
+    body.classList.add('dark-mode')
+    switchIcon.classList.add('fa-moon')
+} else{
+    body.classList.add('light-mode')
+    switchIcon.classList.add('fa-sun')
+}
+
+switchBtn.addEventListener('click', () => {
+    body.classList.toggle('light-mode')
+    body.classList.toggle('dark-mode')
+    switchIcon.classList.toggle('fa-sun')
+    switchIcon.classList.toggle('fa-moon')
+})

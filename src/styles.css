@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif; }
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #C7B3C5; }
+  body header, body footer {
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    body header #switch-light, body footer #switch-light {
+      height: 2rem;
+      width: 2rem; }
+      body header #switch-light i, body footer #switch-light i {
+        font-size: 2rem; }
+  body main {
+    height: 80%; }
+    body main #container {
+      height: 100%;
+      display: grid;
+      grid-template-columns: 15% 75%;
+      justify-content: space-around; }
+      body main #container #options-container {
+        display: grid;
+        grid-template-rows: 10% 80%;
+        align-content: space-around; }
+        body main #container #options-container h3 {
+          align-self: center;
+          justify-self: center; }
+        body main #container #options-container #options {
+          height: 70%;
+          display: flex;
+          flex-direction: column;
+          align-self: center;
+          justify-content: space-evenly;
+          align-items: center; }
+      body main #container #game-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center; }
+        body main #container #game-container #game {
+          height: 40rem;
+          width: 40rem;
+          max-height: 600px;
+          max-width: 600px;
+          display: grid;
+          background-color: #fff; }
+
+.light-mode {
+  background-color: #C7B3C5;
+  color: #000; }
+
+.dark-mode {
+  background-color: #7A3C74;
+  color: #fff; }
