@@ -83,6 +83,8 @@ body {
           max-width: 600px;
           display: grid;
           background-color: #fff; }
+    body main #mobile-stop {
+      display: none; }
 
 .light-mode {
   background-color: #fff;
