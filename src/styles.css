@@ -20,7 +20,8 @@ body {
       body header #switch-light i, body footer #switch-light i {
         font-size: 2rem; }
   body main {
-    height: 80%; }
+    height: 80%;
+    min-height: 40rem; }
     body main #container {
       height: 100%;
       display: grid;
@@ -34,12 +35,43 @@ body {
           align-self: center;
           justify-self: center; }
         body main #container #options-container #options {
-          height: 70%;
+          height: 80%;
           display: flex;
           flex-direction: column;
           align-self: center;
           justify-content: space-evenly;
           align-items: center; }
+          body main #container #options-container #options input[type="color"], body main #container #options-container #options button {
+            height: 2rem;
+            width: 5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            background-color: unset; }
+          body main #container #options-container #options button {
+            border: 1px solid #fff;
+            background-color: #7A3C74;
+            color: #fff;
+            transition: color, background-color 0.2s ease; }
+            body main #container #options-container #options button:hover {
+              background-color: #fff;
+              color: #7A3C74; }
+          body main #container #options-container #options #size-range {
+            height: 7rem;
+            display: grid;
+            grid-template-rows: repeat(3, 33%);
+            align-items: center;
+            justify-items: center; }
+            body main #container #options-container #options #size-range input[type="range"] {
+              -webkit-appearance: none;
+              height: 0.2rem; }
+              body main #container #options-container #options #size-range input[type="range"]::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                height: 1rem;
+                width: 1rem;
+                border-radius: 50%;
+                background: #fff;
+                cursor: pointer; }
       body main #container #game-container {
         display: flex;
         justify-content: space-around;
@@ -53,9 +85,28 @@ body {
           background-color: #fff; }
 
 .light-mode {
-  background-color: #C7B3C5;
+  background-color: #fff;
   color: #000; }
+  .light-mode main #container #options-container #options #size-range input[type="range"] {
+    background-color: #000; }
+    .light-mode main #container #options-container #options #size-range input[type="range"]::-webkit-slider-thumb {
+      background: #000; }
+  .light-mode main #container #game-container #game {
+    border: 1px solid #000; }
 
 .dark-mode {
   background-color: #7A3C74;
   color: #fff; }
+
+@media screen and (max-width: 1023px) {
+  body main {
+    min-height: unset; }
+    body main #container {
+      display: none; }
+    body main #mobile-stop {
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+      body main #mobile-stop p {
+        font-size: 1.5rem; } }
